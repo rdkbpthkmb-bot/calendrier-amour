@@ -1,38 +1,88 @@
 body{
-    margin:0;
-    padding:0;
-    font-family: 'Arial', sans-serif;
-    background:#0f0f0f;
-    color:white;
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(
+135deg,
+#fff7f8,
+#ffe4ec
+);
+min-height:100vh;
 }
 
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.7));
+.accueil{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
-.hero h1{
-    font-size:4rem;
+.carte{
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.1);
+max-width:700px;
+text-align:center;
 }
 
-.hero p{
-    font-size:1.3rem;
-    max-width:700px;
+h1{
+color:#ff4f8a;
+font-size:3rem;
+}
+
+#compteur{
+margin:20px;
+font-size:1.2rem;
+font-weight:bold;
+color:#555;
+}
+
+.citation{
+font-size:1.2rem;
+line-height:1.8;
+color:#666;
 }
 
 .btn{
-    padding:15px 30px;
-    background:#ff4d8d;
-    color:white;
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    margin-top:20px;
+background:#ff4f8a;
+color:white;
+border:none;
+padding:18px 30px;
+border-radius:50px;
+font-size:1rem;
+cursor:pointer;
+margin-top:20px;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.cache{
+display:none;
+}
+
+#voyage{
+padding:50px;
+text-align:center;
+}
+
+.jours{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.jour{
+background:white;
+padding:20px;
+width:160px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.verrouille{
+opacity:0.5;
 }
