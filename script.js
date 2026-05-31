@@ -18,3 +18,8 @@ document.querySelector(".accueil").style.display="none";
 document.getElementById("voyage").style.display="block";
 
 }
+function ouvrirJour1(){
+
+document.getElementById("jour1").style.display="block";
+
+}
