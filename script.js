@@ -9,7 +9,7 @@ const jours = Math.floor(
 );
 
 document.getElementById("compteur").innerHTML =
-`❤️ Ensemble depuis ${jours} jours ❤️`;
+`❤️ Ensemble depuis ${jours} jours`;
 
 function ouvrirVoyage() {
 
@@ -21,16 +21,16 @@ function ouvrirVoyage() {
 
 function ouvrirJour1() {
 
-alert("Jour 1 fonctionne ❤️");
-
-}
-
   const jour = document.getElementById("jour1");
 
   if (jour.style.display === "block") {
+
     jour.style.display = "none";
+
   } else {
+
     jour.style.display = "block";
+
   }
 
 }
