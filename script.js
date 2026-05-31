@@ -21,7 +21,16 @@ document.getElementById("voyage").style.display = "block";
 
 function ouvrirJour1(){
 
-document.getElementById("jour1").style.display = "block";
+const jour = document.getElementById("jour1");
+
+if(jour.style.display === "block"){
+    jour.style.display = "none";
+}
+else{
+    jour.style.display = "block";
+}
+
+}
 
 
 
