@@ -1,37 +1,32 @@
-const debut = new Date("2025-09-23");
+const debut = new Date("2024-09-23");
 
 const aujourdhui = new Date();
 
 const difference = aujourdhui - debut;
 
 const jours = Math.floor(
-difference / (1000 * 60 * 60 * 24)
+  difference / (1000 * 60 * 60 * 24)
 );
 
 document.getElementById("compteur").innerHTML =
 `❤️ Ensemble depuis ${jours} jours ❤️`;
 
-function ouvrirVoyage(){
+function ouvrirVoyage() {
 
-document.querySelector(".accueil").style.display = "none";
+  document.querySelector(".accueil").style.display = "none";
 
-document.getElementById("voyage").style.display = "block";
+  document.getElementById("voyage").style.display = "block";
 
 }
 
-function ouvrirJour1(){
+function ouvrirJour1() {
 
-const jour = document.getElementById("jour1");
+  const jour = document.getElementById("jour1");
 
-if(jour.style.display === "block"){
+  if (jour.style.display === "block") {
     jour.style.display = "none";
-}
-else{
+  } else {
     jour.style.display = "block";
-}
-
-}
-
-
+  }
 
 }
