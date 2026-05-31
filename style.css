@@ -129,3 +129,9 @@ h1{
     line-height:2;
     color:#4a3620;
 }
+.cache{
+    display:none;
+}
+#voyage{
+    display:none;
+}
