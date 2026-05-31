@@ -1,262 +1,218 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    padding:0;
-    font-family: Georgia, serif;
-
-    background:linear-gradient(
-    135deg,
-    #e9dfcf,
-    #d8c3a5
-    );
-
-    min-height:100vh;
+font-family: "Georgia", serif;
+background: linear-gradient(180deg,#fff7f8,#ffeef2);
+min-height:100vh;
+color:#4b2c36;
+padding:20px;
 }
 
-/* ======================
-   COUVERTURE
-====================== */
-
-.accueil{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
+.couverture{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
 }
 
-.carte{
-    background:#f8f3ea;
-
-    max-width:850px;
-    width:100%;
-
-    padding:60px;
-
-    text-align:center;
-
-    border-radius:35px;
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,0.15);
-
-    border:1px solid rgba(139,111,71,0.2);
+.livre{
+max-width:900px;
+width:100%;
+background:white;
+padding:40px;
+border-radius:40px;
+box-shadow:0 15px 50px rgba(0,0,0,0.15);
+text-align:center;
+position:relative;
+overflow:hidden;
 }
 
-.photo-couple{
+.livre::before{
+content:"🌷";
+font-size:120px;
+position:absolute;
+top:-20px;
+right:-10px;
+opacity:0.15;
+}
 
-    width:280px;
-    height:360px;
-
-    object-fit:cover;
-
-    border-radius:20px;
-
-    border:10px solid white;
-
-    transform:rotate(-2deg);
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,0.2);
-
-    margin-bottom:30px;
+.photo-couverture{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:8px solid #ffd6df;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 h1{
-    font-size:3rem;
-    color:#4a3620;
-
-    text-transform:uppercase;
-
-    letter-spacing:2px;
-
-    margin-bottom:15px;
+font-size:2.5rem;
+margin-bottom:15px;
+color:#d14d72;
 }
 
-.soustitre{
-    font-size:1.4rem;
-    font-style:italic;
-    color:#7b6246;
+h2{
+margin-bottom:20px;
 }
 
-#compteur{
-    margin:25px 0;
-    color:#7b6246;
-    font-size:1rem;
+.intro{
+line-height:1.8;
+font-size:1.1rem;
+max-width:650px;
+margin:auto;
 }
-
-.citation{
-    margin-top:25px;
-    line-height:2;
-    font-size:1.2rem;
-    color:#4a3620;
-}
-
-/* ======================
-   BOUTONS
-====================== */
 
 .btn{
-
-    margin-top:35px;
-
-    background:#6e5638;
-
-    color:white;
-
-    border:none;
-
-    padding:18px 35px;
-
-    font-size:1.1rem;
-
-    border-radius:50px;
-
-    cursor:pointer;
-
-    transition:0.3s;
+background:#d14d72;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+margin-top:30px;
+transition:0.3s;
 }
 
 .btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.15);
+transform:scale(1.05);
 }
-
-/* ======================
-   LIVRE
-====================== */
 
 .cache{
-    display:none;
+display:none;
 }
 
-#voyage{
-
-    display:none;
-
-    min-height:100vh;
-
-    padding:40px;
-
-    background:#efe4d2;
+.progression{
+width:100%;
+height:16px;
+background:#f3d9df;
+border-radius:30px;
+margin:30px auto;
+overflow:hidden;
+max-width:900px;
 }
 
-#voyage h2{
-
-    text-align:center;
-
-    color:#4a3620;
-
-    font-size:2.5rem;
-
-    margin-bottom:40px;
+#barre{
+height:100%;
+width:4%;
+background:#d14d72;
+border-radius:30px;
+transition:1s;
 }
 
-/* ======================
-   SOMMAIRE
-====================== */
-
-.jours{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:25px;
+.petale{
+display:none;
+max-width:850px;
+margin:40px auto;
+padding:40px;
+background:white;
+border-radius:35px;
+box-shadow:0 12px 35px rgba(0,0,0,0.12);
+text-align:center;
+position:relative;
 }
 
-.jour{
-
-    background:white;
-
-    width:280px;
-
-    padding:25px;
-
-    border-radius:25px;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
+.petale.actif{
+display:block;
 }
 
-.jour:hover{
-
-    transform:
-    translateY(-8px)
-    scale(1.02);
+.petale::before{
+content:"🌷";
+font-size:60px;
+position:absolute;
+top:20px;
+right:25px;
+opacity:0.15;
 }
 
-.jour h3{
-
-    color:#4a3620;
-
-    margin-bottom:10px;
+.petale p{
+font-size:1.2rem;
+line-height:1.9;
+margin-top:20px;
 }
 
-.jour p{
-
-    color:#7b6246;
+.photo-petale{
+width:100%;
+max-height:450px;
+object-fit:cover;
+border-radius:25px;
+margin-bottom:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-.verrouille{
-
-    opacity:0.45;
+.btn-roue{
+background:#ff8ba7;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+margin-top:30px;
+transition:0.3s;
 }
 
-/* ======================
-   CHAPITRE
-====================== */
-
-#jour1{
-
-    margin-top:40px;
+.btn-roue:hover{
+transform:scale(1.05);
 }
 
-#jour1 .carte{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:left;
+.cadeau{
+margin-top:25px;
+padding:20px;
+border-radius:20px;
+background:#fff0f4;
+font-size:1.1rem;
+font-weight:bold;
+display:none;
 }
 
-#jour1 h2{
-
-    text-align:center;
-
-    margin-bottom:30px;
+.navigation{
+display:flex;
+justify-content:space-between;
+margin-top:35px;
+gap:20px;
 }
 
-#jour1 p{
-
-    font-size:1.15rem;
-
-    line-height:2;
-
-    color:#4a3620;
+.nav-btn{
+flex:1;
+background:#d14d72;
+color:white;
+border:none;
+padding:15px;
+border-radius:50px;
+cursor:pointer;
+font-size:16px;
 }
 
-/* ======================
-   EFFET LIVRE
-====================== */
-
-.carte::before{
-
-    content:"";
-
-    position:absolute;
+.fin{
+text-align:center;
+padding:50px;
+font-size:1.3rem;
 }
 
-body{
+@media(max-width:768px){
 
-    overflow-x:hidden;
+.livre,
+.petale{
+padding:25px;
+}
+
+h1{
+font-size:2rem;
+}
+
+.petale p{
+font-size:1.05rem;
+}
+
+.photo-couverture{
+width:170px;
+height:170px;
+}
+
 }
