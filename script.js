@@ -13,13 +13,16 @@ document.getElementById("compteur").innerHTML =
 
 function ouvrirVoyage(){
 
-document.querySelector(".accueil").style.display="none";
+document.querySelector(".accueil").style.display = "none";
 
-document.getElementById("voyage").style.display="block";
+document.getElementById("voyage").style.display = "block";
 
 }
+
 function ouvrirJour1(){
 
-document.getElementById("jour1").style.display="block";
+document.getElementById("jour1").style.display = "block";
+
+
 
 }
