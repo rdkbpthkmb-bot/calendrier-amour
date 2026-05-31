@@ -21,6 +21,10 @@ function ouvrirVoyage() {
 
 function ouvrirJour1() {
 
+alert("Jour 1 fonctionne ❤️");
+
+}
+
   const jour = document.getElementById("jour1");
 
   if (jour.style.display === "block") {
