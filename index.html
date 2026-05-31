@@ -2,11 +2,10 @@
 <html lang="fr">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Le Livre de Notre Histoire</title>
+<title>Le Jardin des Tulipes d'Amlyne</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,47 +13,33 @@
 
 <body>
 
-<section class="accueil">
+<!-- Couverture -->
 
-<div class="carte">
+<section id="couverture" class="couverture">
 
-<img src="photos/photos/08FB2BB3-D446-4F8A-BA1F-1252BBB6F62C.png" class="photo-couple">
+<div class="livre">
 
-<h1>📖 LE LIVRE DE NOTRE HISTOIRE</h1>
+<img src="photos/08FB2BB3-D446-4F8A-BA1F-1252BBB6F62C.png"
+class="photo-couverture">
 
-<p class="soustitre">
-Nicolas & Amlyne
-</p>
+<h1>🌷 Le Jardin des Tulipes 🌷</h1>
 
-<div id="compteur"></div>
+<h2>Amlyne ❤️ Nicolas</h2>
 
-<p class="citation">
+<p class="intro">
 
-Certaines histoires méritent d'être racontées.
+Chaque pétale de ce livre contient un souvenir,
+une pensée, une promesse ou une surprise.
 
-<br><br>
+Je ne peux pas réécrire le passé.
 
-Celle-ci parle de nous.
+Mais je peux écrire les pages qui viennent.
 
-<br>
-
-De nos souvenirs.
-
-<br>
-
-De nos fous rires.
-
-<br>
-
-Des leçons que j'ai apprises.
-
-<br>
-
-Et de toutes les aventures qu'il nous reste encore à écrire.
+Et j'espère de tout cœur les écrire avec toi.
 
 </p>
 
-<button class="btn" onclick="ouvrirVoyage()">
+<button class="btn" onclick="ouvrirLivre()">
 📖 Ouvrir le livre
 </button>
 
@@ -62,119 +47,285 @@ Et de toutes les aventures qu'il nous reste encore à écrire.
 
 </section>
 
-<section id="voyage" class="cache">
+<!-- LIVRE -->
 
-<h2>📖 SOMMAIRE</h2>
+<section id="livre" class="cache">
 
-<div class="jours">
+<div class="progression">
 
-<div class="jour" onclick="ouvrirJour1()">
-<h3>📖 Chapitre I</h3>
-<p>Le début</p>
-</div>
-
-<div class="jour verrouille">
-<h3>🔒 Chapitre II</h3>
-<p>Une vérité importante</p>
-</div>
-
-<div class="jour verrouille">
-<h3>🔒 Chapitre III</h3>
-<p>La montagne</p>
-</div>
-
-<div class="jour verrouille">
-<h3>🔒 Chapitre IV</h3>
-<p>La cuisine</p>
-</div>
-
-<div class="jour verrouille">
-<h3>🔒 Chapitre V</h3>
-<p>Ce que j'ai compris</p>
-</div>
+<div id="barre"></div>
 
 </div>
 
-<div id="jour1" class="cache">
+<!-- PETALE 1 -->
 
-<div class="carte">
+<div class="petale actif" id="petale1">
 
-<h2>📖 Chapitre I — Le début</h2>
+<h2>🌷 Pétale 1 / 22</h2>
 
 <p>
 
-Amlyne,
-
-<br><br>
-
-Ce livre commence aujourd'hui parce qu'il y a des choses que j'aurais dû voir plus tôt.
-
-<br><br>
-
-J'ai parfois été trop concentré sur moi-même.
-
-Sur mes préoccupations.
-
-Sur certaines blessures que je n'avais pas totalement laissées derrière moi.
-
-<br><br>
-
-Et pendant ce temps, je ne t'ai pas toujours montré à quel point tu étais importante.
-
-<br><br>
-
-Pourtant quand je regarde notre histoire aujourd'hui, je vois une femme exceptionnelle.
-
-Une femme drôle.
-
-Une femme forte.
-
-Une femme qui a été présente même lorsque je ne voyais pas toujours tout ce qu'elle faisait pour nous.
-
-<br><br>
-
-Je ne peux pas changer ce qui appartient au passé.
-
-Mais je peux choisir ce que je veux faire aujourd'hui.
-
-<br><br>
-
-Alors pendant les pages de ce livre, je veux te rappeler une chose :
-
-<br><br>
-
-Tu es précieuse.
-
-<br>
-
-Tu comptes énormément pour moi.
-
-<br>
-
-Et je ne veux plus oublier la chance que j'ai de t'avoir dans ma vie.
-
-<br><br>
-
-❤️
-
-<br><br>
-
-Nicolas
+J'ai créé ce livre pour te rappeler chaque jour une chose essentielle :
+tu es précieuse à mes yeux et je ne veux plus jamais l'oublier.
 
 </p>
 
-<button class="btn">
-🎁 Découvrir mon cadeau du jour
+<button class="btn-roue"
+onclick="tournerRoue(1)">
+🎡 Tourner la roue
 </button>
 
-</div>
+<div id="cadeau1" class="cadeau"></div>
 
 </div>
 
-</section>
+<!-- PETALE 2 -->
 
-<script src="script.js"></script>
+<div class="petale" id="petale2">
 
-</body>
+<h2>🌷 Pétale 2 / 22</h2>
 
-</html>
+<img src="photos/1B40CBA3-5ED3-4E23-AA30-6CAC6BC93F5B.png"
+class="photo-petale">
+
+<p>
+
+Avec le temps, j'ai compris que j'avais parfois été trop centré sur moi-même.
+Aujourd'hui je veux apprendre à te regarder davantage et à t'aimer mieux.
+
+</p>
+
+<button class="btn-roue"
+onclick="tournerRoue(2)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau2" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 3 -->
+
+<div class="petale" id="petale3">
+
+<h2>🌷 Pétale 3 / 22</h2>
+
+<p>
+
+Je suis désolé pour les moments où je t'ai blessée.
+Mes actes d'aujourd'hui seront toujours plus importants que mes regrets d'hier.
+
+</p>
+
+<button class="btn-roue"
+onclick="tournerRoue(3)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau3" class="cadeau"></div>
+
+</div>
+<!-- PETALE 4 -->
+
+<div class="petale" id="petale4">
+
+<h2>🌷 Pétale 4 / 22</h2>
+
+<img src="photos/21D303E0-8E98-4265-BC45-D4EBCC68979C.png"
+class="photo-petale">
+
+<p>
+
+Tu as été présente dans des moments où beaucoup seraient partis.
+Ta force, ta loyauté et ton cœur sont des choses que j'admire profondément.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(4)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau4" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 5 -->
+
+<div class="petale" id="petale5">
+
+<h2>🌷 Pétale 5 / 22</h2>
+
+<p>
+
+Quand je pense à mon avenir, je ne vois pas seulement des projets ou des rêves.
+Je te vois toi, à mes côtés.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(5)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau5" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 6 -->
+
+<div class="petale" id="petale6">
+
+<h2>🌷 Pétale 6 / 22</h2>
+
+<img src="photos/274312F8-E4D1-4E76-AAD4-C59C532E39F7.png"
+class="photo-petale">
+
+<p>
+
+J'ai parfois agi comme si certaines choses étaient acquises.
+Aujourd'hui je sais qu'une relation se nourrit chaque jour de gratitude et d'attention.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(6)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau6" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 7 -->
+
+<div class="petale" id="petale7">
+
+<h2>🌷 Pétale 7 / 22</h2>
+
+<p>
+
+Ton sourire a le pouvoir de transformer une journée ordinaire en un souvenir heureux.
+C'est un cadeau dont je ne mesure pas toujours la valeur.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(7)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau7" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 8 -->
+
+<div class="petale" id="petale8">
+
+<h2>🌷 Pétale 8 / 22</h2>
+
+<img src="photos/3FD10AA3-6DC7-4BFE-83A0-EB54075C1B3D.png"
+class="photo-petale">
+
+<p>
+
+Je veux être un homme dont tu peux être fière,
+non pas par les paroles, mais par la façon dont je te traite chaque jour.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(8)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau8" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 9 -->
+
+<div class="petale" id="petale9">
+
+<h2>🌷 Pétale 9 / 22</h2>
+
+<p>
+
+Même dans les périodes compliquées,
+il y a toujours eu une chose qui restait évidente pour moi :
+mon attachement à toi.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(9)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau9" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 10 -->
+
+<div class="petale" id="petale10">
+
+<h2>🌷 Pétale 10 / 22</h2>
+
+<img src="photos/62743076-8750-46C0-8410-B963A9873AFD.png"
+class="photo-petale">
+
+<p>
+
+Je regrette les moments où je n'ai pas vu tes efforts,
+tes attentions ou tes besoins.
+Je veux apprendre à être plus présent pour toi.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(10)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau10" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 11 -->
+
+<div class="petale" id="petale11">
+
+<h2>🌷 Pétale 11 / 22</h2>
+
+<p>
+
+Tu m'as appris qu'aimer quelqu'un,
+ce n'est pas seulement partager les bons moments.
+C'est aussi savoir grandir ensemble.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(11)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau11" class="cadeau"></div>
+
+</div>
+
+<!-- PETALE 12 -->
+
+<div class="petale" id="petale12">
+
+<h2>🌷 Pétale 12 / 22</h2>
+
+<p>
+
+Parfois il faut risquer de perdre quelque chose
+pour comprendre à quel point cette chose comptait réellement.
+Je ne veux plus jamais oublier ta valeur.
+
+</p>
+
+<button class="btn-roue" onclick="tournerRoue(12)">
+🎡 Tourner la roue
+</button>
+
+<div id="cadeau12" class="cadeau"></div>
+
+</div>
