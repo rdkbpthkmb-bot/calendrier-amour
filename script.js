@@ -10,3 +10,11 @@ difference / (1000 * 60 * 60 * 24)
 
 document.getElementById("compteur").innerHTML =
 `❤️ Ensemble depuis ${jours} jours ❤️`;
+
+function ouvrirVoyage(){
+
+document.querySelector(".accueil").style.display="none";
+
+document.getElementById("voyage").style.display="block";
+
+}
